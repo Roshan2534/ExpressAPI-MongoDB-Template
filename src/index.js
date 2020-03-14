@@ -1,3 +1,4 @@
+require('./models/User');
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser'); 
@@ -8,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(authRoutes);
 
-const mongoUri = ''
+const mongoUri = 'mongodb+srv://roshan:Hesoyam123@cluster0-qvgp5.mongodb.net/test?retryWrites=true&w=majority'
 mongoose.connect(mongoUri, {
     useNewUrlParser: true,
     useCreateIndex: true
